@@ -8,6 +8,18 @@
   --highlight-color: #02b080;
 }
 
+#root {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--background-color);
   color: white;
@@ -33,4 +45,11 @@ body {
   display: block;
   height: 1px;
   background-color: var(--highlight-color);
+}
+
+.input-box {
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.126);
+  padding: 0.5em;
+  border-radius: 5px;
 }

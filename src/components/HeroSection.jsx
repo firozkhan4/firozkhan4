@@ -3,14 +3,14 @@ import profileImg from '../assets/profileImg.jpg'
 function HeroSection() {
 
     return (
-        <div className='w-full h-[80vh]'>
+        <div className='w-full h-[45em] relative max-sm:mt-3'>
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center items-center max-md:flex-col-reverse h-full">
                 <div className="flex flex-col justify-around h-2/4 w-4/5 max-sm:items-center">
                     <div className='max-sm:flex max-sm:text-lg text-xl'>
                         <h2 className="text-with-line w-20 text-[1.5rem] text-[--highlight-color] mb-6">
                             Hello
                         </h2>
-                        <span className='max-sm:block hidden text-2xl mx-2 text-[--highlight-color]' >!</span>
+                        <span className='max-sm:block hidden text-2xl mx-2 text-[--highlight-color] font-semibold' >!</span>
                         <h2 className="text-[2.5rem] max-sm:text-2xl "> I'm Firoz Khan</h2>
                     </div>
                     <p className='text-gray-400 text-xl'>Fullstack Developer</p>
