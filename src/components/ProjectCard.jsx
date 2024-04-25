@@ -6,7 +6,7 @@ function ProjectCard(props) {
 
     return (
 
-        <div className='bg-[#171F38] w-[26vw] h-[55vh] p-5 flex flex-col gap-y-3  max-sm:w-full rounded-lg overflow-hidden max-sm:h-[52vh]'>
+        <div className='bg-[#171F38] w-[26vw] h-[25em] p-5 flex flex-col gap-y-3  max-sm:w-full rounded-lg overflow-hidden max-sm:h-[25em] hover:scale-105'>
             <div className="mx-auto">
                 <img src={"https://www.piyushgarg.dev/_next/image?url=%2Fimages%2Ftwitter-clone.jpg&w=384&q=75 "} alt="" />
             </div>

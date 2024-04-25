@@ -18,7 +18,7 @@ function HeroSection() {
                         Hi! there My name is Firoz Khan 👨‍💻 Passionate BCA student aspiring to be a successful software developer. Currently honing skills through study and hands-on projects. Enthusiastic about new technologies and eager to collaborate on impactful projects. Let's connect and develop together!
                     </p>
 
-                    <a className='w-52 bg-[--highlight-color] p-3 font-semibold rounded-lg font-serif text-white-100 shadow-md shadow-red-300 hover:text-white-100' href='https://www.linkedin.com/in/firozkhan5/' target='_blank'>Connect on LinkedIn</a>
+                    <a className='w-52 bg-[--highlight-color] p-3 font-semibold rounded-lg font-serif text-white-100 hover:text-white-100 linkedin-btn ' href='https://www.linkedin.com/in/firozkhan5/' target='_blank'>Connect on LinkedIn</a>
                 </div>
                 <div className='w-full h-full flex items-center justify-end max-sm:justify-center  '>
                     <img src={profileImg} alt="" className='rounded-full w-[25em] max-md:w-[13em] max-sm:my-10 ' />
