@@ -7,39 +7,39 @@ export default function HeroSection() {
   return (
     <section className="font-semibold space-y-5 ">
       <p className="font-bold text-4xl ">Oh, hello there 👋</p>
-      <ul className="space-y-1 text-slate-400">
+      <ul className="space-y-1 ">
         <li>
           👨‍🎓 I’m{" "}
-          <code className={theme === "dark" ? "text-white" : "text-slate-700"}>
+          <em >
             Firoz Khan
-          </code>
+          </em>
           , a 22 year-old university student.
         </li>
         <li>
           👨‍💻 The{" "}
-          <code className={theme === "dark" ? "text-white" : "text-slate-700"}>
+          <em >
             Software Developer
-          </code>
+          </em>
           , part time philosopher and a lover of all things tech.
         </li>
         <li>
           ⚒️ I mainly work with{" "}
-          <code className={theme === "dark" ? "text-white" : "text-slate-700"}>
+          <em >
             Java
-          </code>
+          </em>
           ,{" "}
-          <code className={theme === "dark" ? "text-white" : "text-slate-700"}>
+          <em >
             JavaScript
-          </code>{" "}
+          </em>{" "}
           and{" "}
-          <code className={theme === "dark" ? "text-white" : "text-slate-700"}>
+          <em >
             C++
-          </code>{" "}
+          </em>{" "}
           on a daily basis.
         </li>
         <li>🏡 Currently living in the beautiful city of Kota in India.</li>
       </ul>
-      <p className="text-slate-400">
+      <p >
         This blog will serve as a home for all my thoughts, notes and
         experiences, ranging from programming to philosophy, web development,
         system design and more. Scroll down and check ‘em out! (I’m currently
