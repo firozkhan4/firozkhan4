@@ -7,5 +7,4 @@ import ContentList from "./ContentList";
 import Footer from "./Footer";
 import MarkdownRenderer from "./MarkdownRenderer";
 
-
 export { TopNavBar, HeroSection, SocialIcons, SocialIcon, ContentSection, ContentList, Footer, MarkdownRenderer };

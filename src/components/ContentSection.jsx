@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ContentList } from "./index";
+import manifest from "../assets/blogs/manifest.json";
 
 export default function ContentSection() {
   return (
@@ -19,11 +20,18 @@ export default function ContentSection() {
         <p className="text-sm">Things I have written recently.</p>
       </section>
       <section>
-        <ContentList
-          title={"First blog post"}
-          date={"Oct  08,  2022"}
-          link={"https://github.com/firozkhan4"}
-        />
+        {
+          manifest.map((item,index)=>{
+            return(
+              <ContentList
+                title={item.title}
+                date={item.date}
+                link={item.src}
+                key={index}
+              />
+            )
+          })
+        }
       </section>
     </div>
   );
