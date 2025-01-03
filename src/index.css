@@ -64,27 +64,25 @@ aside {
   background-color: #24273a;
   padding: 1rem;
   border-right: 1px solid var(--border-color);
-  overflow-y: auto;
+}
+
+aside div{
+  flex-grow: 1;
 }
 
 aside ul {
   list-style: none;
   padding: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
+  padding: 0;
+  flex-grow: 1;
 }
 
-aside div{
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
 
 aside li {
   padding: 0.5rem 0;
   color: var(--highlight-color);
   cursor: pointer;
-  overflow: hidden;
-  
 }
 
 aside li:hover {
@@ -93,6 +91,8 @@ aside li:hover {
 
 .link {
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .article-titles {
