@@ -1,5 +1,5 @@
 article {
-  padding: 2rem 5rem;
+  padding: 2rem 15rem;
   overflow-y: auto;
   line-height: 2;
 }
@@ -12,9 +12,9 @@ article p {
   margin: 1rem 0;
 }
 
-code{
-    border-radius: 5px;
-    overflow: hidden;
+code {
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 code pre {
@@ -25,15 +25,14 @@ code pre {
   overflow-x: auto;
   font-size: 0.9rem;
   line-height: 1.4;
-
 }
 
-pre::-webkit-scrollbar{
-    background: #45475a;
+pre::-webkit-scrollbar {
+  background: #45475a;
 }
 
-pre::-webkit-scrollbar-thumb{
-    background: #6c708d;
+pre::-webkit-scrollbar-thumb {
+  background: #6c708d;
 }
 
 /* article code {
