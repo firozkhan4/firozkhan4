@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Layout from "./pages/Layout";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects";
-import DSA from "./pages/DSA";
 import Articles from "./pages/Articles";
-import Page from "./pages/Page";
+import DSA from "./pages/DSA";
+import DSAPage from "./pages/DSAPage";
+import Home from "./pages/Home";
+import Layout from "./pages/Layout";
+import Projects from "./pages/Projects";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/dsa">
           <Route index element={<DSA />} />
-          <Route path=":id" element={<Page />} />
+          <Route path=":id" element={<DSAPage />} />
         </Route>
         <Route path="/articles" element={<Articles />} />
       </Route>
