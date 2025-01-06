@@ -1,50 +1,35 @@
-# React + TypeScript + Vite
+# 🌙 Welcome to My Cozy GitHub Corner 🌌
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey there! I'm Firoz Khan – a programmer, tinkerer, and lifelong learner who enjoys turning ideas into reality. Here, you'll find a mix of **creative projects**, **automation tools**, and my journey in **computer science and programming**.  
 
-Currently, two official plugins are available:
+## 🛠️ What I’m Building
+- 🚀 **[My Portfolio](https://firozkhan4.netlify.app)**: A space to share my DSA journey, articles, and learning.
+- 🕹️ **Chess in Java**: Classic fun, handcrafted.
+- 🔧 **Custom Version Control System**: Reinventing the wheel, just for the joy of it.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌱 Current Learning Focus
+- **Zig** – Diving into low-level programming.
+- **DSA** – Mastering every node, every pointer.
+- **Go & Python** – Exploring modern and versatile programming languages.
 
-## Expanding the ESLint configuration
+## 🧑‍💻 Things I Love Working On
+- ✨ From-scratch creations like compilers and automation tools.
+- 🛠️ Tools that solve real-world problems elegantly.
+- 🎨 Custom themes  🐾.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🕰️ Recent Creations
+- 🎯 **Tab Switcher Extension** – Effortless tab switching for better productivity.
+- ⏳ **Year Countdown Timer** – Keeping track of time like a pro.
 
-- Configure the top-level `parserOptions` property like this:
+## 🎵 Chill With Me
+I believe in coding with a cup of coffee ☕ and a playlist of lofi beats. Let's create magic, one line at a time.  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+> _"Code is poetry; every line tells a story."_  
+Let's build something extraordinary.  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+📫 Reach out: [Email](mailto:firozkhan907979@gmail.com)  
+🌐 Explore more: [Porfolio](https://firozkhan4.netlify.app)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
