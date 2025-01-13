@@ -1,35 +1,55 @@
-# 🌙 Welcome to My Cozy GitHub Corner 🌌
 
-Hey there! I'm Firoz Khan – a programmer, tinkerer, and lifelong learner who enjoys turning ideas into reality. Here, you'll find a mix of **creative projects**, **automation tools**, and my journey in **computer science and programming**.  
 
-## 🛠️ What I’m Building
-- 🚀 **[My Portfolio](https://firozkhan4.netlify.app)**: A space to share my DSA journey, articles, and learning.
-- 🕹️ **Chess in Java**: Classic fun, handcrafted.
-- 🔧 **Custom Version Control System**: Reinventing the wheel, just for the joy of it.
+# Hi there, I'm Firoz Khan 👋
 
-## 🌱 Current Learning Focus
-- **Zig** – Diving into low-level programming.
-- **DSA** – Mastering every node, every pointer.
-- **Go & Python** – Exploring modern and versatile programming languages.
+![Profile Views](https://komarev.com/ghpvc/?username=firozkhan4&color=blue)
 
-## 🧑‍💻 Things I Love Working On
-- ✨ From-scratch creations like compilers and automation tools.
-- 🛠️ Tools that solve real-world problems elegantly.
-- 🎨 Custom themes  🐾.
+## 🚀 About Me
+- 🌱 I’m currently learning **Go programming and Compiler Development**
+- 👯 I’m looking to collaborate on **Open Source Compiler Design and Procrastination-Solving Software**
+- 💬 Ask me about **Go, Compiler Design, and Time Management Strategies**
+- 📫 How to reach me: **firozkhan4@example.com**
+- ⚡ Fun fact: **I can turn coffee into code and procrastination into productivity tools.**
 
-## 🕰️ Recent Creations
-- 🎯 **Tab Switcher Extension** – Effortless tab switching for better productivity.
-- ⏳ **Year Countdown Timer** – Keeping track of time like a pro.
+## 🛠️ Technologies & Tools
+- **Programming Languages:** Go, Python, JavaScript, C++
+- **Frameworks:** React, Gin (Go), Express.js
+- **Tools:** Git, Docker, Kubernetes, VS Code
+- **Databases:** PostgreSQL, MySQL, MongoDB
 
-## 🎵 Chill With Me
-I believe in coding with a cup of coffee ☕ and a playlist of lofi beats. Let's create magic, one line at a time.  
+## 📈 GitHub Stats
+![Firoz Khan's GitHub stats](https://github-readme-stats.vercel.app/api?username=firozkhan4&show_icons=true&theme=radical)
+
+## 🏆 GitHub Trophies
+![Trophies](https://github-profile-trophy.vercel.app/?username=firozkhan4)
+
+## 📫 Connect with Me
+- [LinkedIn](https://www.linkedin.com/in/firozkhan4/)
+- [Twitter](https://twitter.com/firozkhan4)
+- [Personal Website](https://firozkhan.dev)
+
+## 📂 Projects
+### [Procrastination Solver](https://github.com/firozkhan4/procrastination-solver)
+**Description:** A software solution for tackling procrastination with task and time management tools.
+
+**Technologies used:** Go, React, PostgreSQL
+
+### [GoLang Compiler](https://github.com/firozkhan4/golang-compiler)
+**Description:** A custom compiler built using Go to experiment with language design and compilation.
+
+**Technologies used:** Go, ANTLR, LLVM
+
+### [Personal Portfolio](https://github.com/firozkhan4/portfolio)
+**Description:** My personal website showcasing my projects, blog posts, and contact information.
+
+**Technologies used:** HTML, CSS, JavaScript, React
+
+## 📚 Blog Posts
+- [How I Designed My First Compiler](https://firozkhan.dev/blog/designing-my-first-compiler)
+- [5 Tips to Beat Procrastination](https://firozkhan.dev/blog/beat-procrastination)
+- [Go vs Python: Which One to Choose?](https://firozkhan.dev/blog/go-vs-python)
 
 ---
 
-> _"Code is poetry; every line tells a story."_  
-Let's build something extraordinary.  
+⭐️ From [firozkhan4](https://github.com/firozkhan4)
 
-📫 Reach out: [Email](mailto:firozkhan907979@gmail.com)  
-🌐 Explore more: [Porfolio](https://firozkhan4.netlify.app)
-
----
