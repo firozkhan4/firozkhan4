@@ -8,7 +8,7 @@
 - 🌱 I’m currently learning **Go programming and Compiler Development**
 - 👯 I’m looking to collaborate on **Open Source Compiler Design and Procrastination-Solving Software**
 - 💬 Ask me about **Go, Compiler Design, and Time Management Strategies**
-- 📫 How to reach me: **firozkhan4@example.com**
+- 📫 How to reach me: **firozkhan907979@gmail.com**
 - ⚡ Fun fact: **I can turn coffee into code and procrastination into productivity tools.**
 
 ## 🛠️ Technologies & Tools
@@ -45,9 +45,6 @@
 **Technologies used:** HTML, CSS, JavaScript, React
 
 ## 📚 Blog Posts
-- [How I Designed My First Compiler](https://firozkhan.dev/blog/designing-my-first-compiler)
-- [5 Tips to Beat Procrastination](https://firozkhan.dev/blog/beat-procrastination)
-- [Go vs Python: Which One to Choose?](https://firozkhan.dev/blog/go-vs-python)
 
 ---
 
