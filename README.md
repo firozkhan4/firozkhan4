@@ -9,7 +9,7 @@
 - 👯 I’m looking to collaborate on **Open Source Software**
 - 💬 Ask me about **Go, Compiler Design, and Low Level Programming**
 - 📫 How to reach me: **firozkhan907979@gmail.com**
-- ⚡ Fun fact: **I spend more time debugging than coding—modern-day digital detectives! 🕵️‍♂️
+- ⚡ Fun fact: **I spend more time debugging than coding—modern-day digital detectives! 🕵️‍♂️**
 
 ## 🛠️ Technologies & Tools
 - **Programming Languages:** Go, Python, JavaScript, C, Java
