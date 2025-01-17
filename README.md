@@ -6,15 +6,15 @@
 
 ## 🚀 About Me
 - 🌱 I’m currently learning **Go programming and Compiler Development**
-- 👯 I’m looking to collaborate on **Open Source Compiler Design and Procrastination-Solving Software**
-- 💬 Ask me about **Go, Compiler Design, and Time Management Strategies**
+- 👯 I’m looking to collaborate on **Open Source Software**
+- 💬 Ask me about **Go, Compiler Design, and Low Level Programming**
 - 📫 How to reach me: **firozkhan907979@gmail.com**
-- ⚡ Fun fact: **I can turn coffee into code and procrastination into productivity tools.**
+- ⚡ Fun fact: **I spend more time debugging than coding—modern-day digital detectives! 🕵️‍♂️
 
 ## 🛠️ Technologies & Tools
-- **Programming Languages:** Go, Python, JavaScript, C++
+- **Programming Languages:** Go, Python, JavaScript, C, Java
 - **Frameworks:** React, Gin (Go), Express.js
-- **Tools:** Git, Docker, Kubernetes, VS Code
+- **Tools:** Git, Docker, Linux
 - **Databases:** PostgreSQL, MySQL, MongoDB
 
 ## 📈 GitHub Stats
@@ -26,7 +26,7 @@
 ## 📫 Connect with Me
 - [LinkedIn](https://www.linkedin.com/in/firozkhan4/)
 - [Twitter](https://twitter.com/firozkhan4)
-- [Personal Website](https://firozkhan.dev)
+- [Personal Website](https://firozkhan4.netlify.app)
 
 ## 📂 Projects
 ### [Procrastination Solver](https://github.com/firozkhan4/procrastination-solver)
@@ -39,7 +39,7 @@
 
 **Technologies used:** Go, ANTLR, LLVM
 
-### [Personal Portfolio](https://github.com/firozkhan4/portfolio)
+### [Personal Portfolio](https://github.com/firozkhan4/firozkhan4)
 **Description:** My personal website showcasing my projects, blog posts, and contact information.
 
 **Technologies used:** HTML, CSS, JavaScript, React
