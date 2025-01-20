@@ -29,8 +29,7 @@
 - [Personal Website](https://firozkhan4.netlify.app)
 
 ## 📂 Projects
-### [Procrastination Solver](https://github.com/firozkhan4/procrastination-solver)
-**Description:** A software solution for tackling procrastination with task and time management tools.
+
 
 **Technologies used:** Go, React, PostgreSQL
 
