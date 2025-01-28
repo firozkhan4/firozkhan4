@@ -13,7 +13,7 @@
 
 ## 🛠️ Technologies & Tools
 - **Programming Languages:** Go, Python, JavaScript, C, Java
-- **Frameworks:** React, Gin (Go), Express.js
+- **Frameworks:** React, , Express.js
 - **Tools:** Git, Docker, Linux
 - **Databases:** PostgreSQL, MySQL, MongoDB
 
