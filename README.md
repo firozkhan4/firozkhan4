@@ -31,7 +31,6 @@
 ## 📂 Projects
 
 
-**Technologies used:** Go, React, PostgreSQL
 
 ### [GoLang Compiler](https://github.com/firozkhan4/golang-compiler)
 **Description:** A custom compiler built using Go to experiment with language design and compilation.
