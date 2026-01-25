@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import React from 'react';
 
 const blogs = [
@@ -22,9 +23,9 @@ export default function Blogs() {
             <h1 className="text-5xl font-medium italic tracking-tighter dark:text-white">
               Blogs <span className="text-2xl font-normal not-italic opacity-30 ml-2">(158)</span>
             </h1>
-            <button className="hidden sm:flex items-center gap-2 px-3 py-1 text-[11px] font-mono uppercase tracking-widest border border-zinc-200 dark:border-zinc-800 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all dark:text-zinc-400">
+            <Link href={'/feed.xml'} className="hidden sm:flex items-center gap-2 px-3 py-1 text-[11px] font-mono uppercase tracking-widest border border-zinc-200 dark:border-zinc-800 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all dark:text-zinc-400">
               Subscribe RSS <span className="opacity-50">ツ</span>
-            </button>
+            </Link>
           </div>
 
           <div className="max-w-2xl space-y-6 text-[1.1rem] leading-relaxed text-zinc-600 dark:text-zinc-400">
@@ -36,7 +37,7 @@ export default function Blogs() {
             </p>
             <p className="text-sm italic">
               If you find my writings helpful, consider subscribing to my
-              <a href="#" className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-4 ml-1">RSS feed</a>.
+              <a href="/feed.xml" className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-4 ml-1">RSS feed</a>.
             </p>
           </div>
         </header>

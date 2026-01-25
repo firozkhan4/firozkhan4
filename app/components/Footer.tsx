@@ -10,7 +10,7 @@ export default function Footer() {
           <a href={socialLink.github} target="_blank" className="hover:underline">GitHub</a>
           <a href={socialLink.linkedin} target="_blank" className="hover:underline">LinkedIn</a>
           <a href={socialLink.twitter} target="_blank" className="hover:underline">Twitter</a>
-          <a href="#" target="_blank" className="hover:underline">RSS</a>
+          <a href="/feed.xml" target="_blank" className="hover:underline">RSS</a>
         </div>
       </div >
     </footer >
