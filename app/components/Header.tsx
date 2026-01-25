@@ -53,16 +53,17 @@ export function Header() {
 
           <nav className="hidden md:block">
             <ul className="flex space-x-8">
-              {navItems.map((item) => (
-                <li key={item.link}>
+              {navItems.map((item) => {
+                const isActive = path === item.link
+                return <li key={item.link}>
                   <Link
                     href={item.link}
-                    className={`text-sm font-medium text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors ${path === item.link ? "text-white" : ""}`}
+                    className={`${isActive ? "dark:text-white text-black" : "text-zinc-600  dark:text-zinc-400 "} text-sm font-medium hover:text-black dark:hover:text-white transition-colors `}
                   >
                     {item.name}
                   </Link>
                 </li>
-              ))}
+              })}
             </ul>
           </nav>
         </div>
