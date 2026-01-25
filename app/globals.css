@@ -1,26 +1,37 @@
+@@import 'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:wght@400;500&display=swap';
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  --font-newsreader: "Newsreader", serif;
+  --font-mono: "JetBrains Mono", monospace; /* Perfect for your technical credits */
+  
+  /* Research-specific colors: Paper and Ink */
+  --color-paper: #fdfdfc;
+  --color-ink: #1a1a1a;
+  --color-ghost: #272935;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    /* Use the variable optical sizing for sharper text at all sizes */
+    font-feature-settings: "opsz" 32;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-paper text-ink font-newsreader transition-colors duration-300;
+  }
+
+  .dark body{
+    @apply bg-ghost
+  }
+
+  /* Headlines in research sites often have tighter letter spacing */
+  h1, h2, h3 {
+    @apply tracking-tight font-medium;
+  }
 }
