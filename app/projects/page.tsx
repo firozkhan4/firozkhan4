@@ -49,7 +49,7 @@ const projects = [
 ; export default function Projects() {
   return (
     <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300 dark:text-white">
-      <main className="container mx-auto max-w-5xl px-6 py-16 md:py-24">
+      <main className="container mx-auto max-w-7xl px-6 py-16 md:py-24">
 
         {/* Page Header */}
         <header className="mb-20 space-y-6">
