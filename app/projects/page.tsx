@@ -11,6 +11,7 @@ const projects = [
     description: "A comprehensive administrative platform designed to streamline academic operations. Built with a focus on data integrity and high-performance backend logic.",
     tech: ["SQL", "Node.js", "Express", "React.js"],
     link: "#",
+    github: "#",
     research_note: "Optimized database queries for 40% faster student record retrieval."
   },
   {
@@ -20,6 +21,7 @@ const projects = [
     description: "A Stack Overflow clone facilitating community-driven knowledge exchange. Features include real-time voting, markdown support, and complex relational data mapping.",
     tech: ["React.js", "Spring Boot", "Postman API", "AWS", "Tailwind CSS"],
     link: "#",
+    github: "#",
     research_note: "Implemented advanced caching strategies for high-traffic question threads."
   },
   {
@@ -28,7 +30,8 @@ const projects = [
     period: "2024",
     description: "A high-efficiency Java CLI tool for text analysis. Uses multithreading to process multiple files simultaneously, providing detailed metrics for lines, words, and UTF-8 byte sizes.",
     tech: ["Java", "Multithreading", "File I/O"],
-    link: "https://github.com/firozkhan4/WordCount",
+    link: "#",
+    github: "https://github.com/firozkhan4/WordCount",
     research_note: "Leveraged concurrent execution to reduce processing time for large-scale datasets."
   },
   {
@@ -37,7 +40,8 @@ const projects = [
     period: "2024",
     description: "An interactive web application visualizing 20+ sorting algorithms. Features real-time rendering of array manipulations, custom speed/size controls, and complex algorithmic logic.",
     tech: ["JavaScript", "HTML5", "CSS3", "Algorithms"],
-    link: "https://github.com/firozkhan4/sorting-visualizer",
+    link: "https://firozkhan4.github.io/Sorting-Visualizer",
+    github: "https://github.com/firozkhan4/Sorting-Visualizer",
     research_note: "Managed asynchronous animation states to prevent UI blocking during intensive computations."
   }
 ];
@@ -62,8 +66,8 @@ const projects = [
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
-          {projects.map((project, idx) => (
-            <article key={idx} className="group space-y-6 border-t border-zinc-200 dark:border-zinc-800 pt-8">
+          {projects.map((project, idx) => {
+            return <article key={idx} className="group space-y-6 border-t border-zinc-200 dark:border-zinc-800 pt-8">
               <div className="flex justify-between items-start">
                 <div>
                   <h2 className="text-3xl font-medium tracking-tight group-hover:text-blue-600 dark:text-zinc-100 dark:group-hover:text-blue-400 transition-colors">
@@ -94,12 +98,14 @@ const projects = [
                   </span>
                 ))}
               </div>
-
-              <Link href={project.link} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">
-                View Repository &rarr;
-              </Link>
+              <div className="flex items-center gap-x-4">
+                <Link href={project.github} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">
+                  View Repository &rarr;
+                </Link>
+                <Link href={project.link} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">Live Demo &rarr;</Link>
+              </div>
             </article>
-          ))}
+          })}
         </div>
       </main>
     </div>
