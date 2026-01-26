@@ -30,70 +30,78 @@ const projects = [
     tech: ["Java", "Multithreading", "File I/O"],
     link: "https://github.com/firozkhan4/WordCount",
     research_note: "Leveraged concurrent execution to reduce processing time for large-scale datasets."
+  },
+  {
+    title: "Sorting Visualizer",
+    category: "Frontend / Algorithms",
+    period: "2024",
+    description: "An interactive web application visualizing 20+ sorting algorithms. Features real-time rendering of array manipulations, custom speed/size controls, and complex algorithmic logic.",
+    tech: ["JavaScript", "HTML5", "CSS3", "Algorithms"],
+    link: "https://github.com/firozkhan4/sorting-visualizer",
+    research_note: "Managed asynchronous animation states to prevent UI blocking during intensive computations."
   }
-]
+];
 
+; export default function Projects() {
+  return (
+    <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300 dark:text-white">
+      <main className="container mx-auto max-w-5xl px-6 py-16 md:py-24">
 
-  ; export default function Projects() {
-    return (
-      <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300 dark:text-white">
-        <main className="container mx-auto max-w-5xl px-6 py-16 md:py-24">
-
-          {/* Page Header */}
-          <header className="mb-20 space-y-6">
-            <h1 className="text-5xl font-medium italic tracking-tighter dark:text-white">
-              Project Archives
-            </h1>
-            <div className="max-w-2xl text-lg opacity-70 italic leading-relaxed">
-              <p>
-                A selection of engineering artifacts and functional systems developed between 2024 and 2026.
-                Each project serves as a case study in scalable architecture and user-centric design.
-              </p>
-            </div>
-          </header>
-
-          {/* Project Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
-            {projects.map((project, idx) => (
-              <article key={idx} className="group space-y-6 border-t border-zinc-200 dark:border-zinc-800 pt-8">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h2 className="text-3xl font-medium tracking-tight group-hover:text-blue-600 dark:text-zinc-100 dark:group-hover:text-blue-400 transition-colors">
-                      {project.title}
-                    </h2>
-                    <span className="font-mono text-[10px] uppercase tracking-[0.2em] opacity-40">
-                      {project.category}
-                    </span>
-                  </div>
-                  <span className="font-mono text-sm opacity-30">{project.period}</span>
-                </div>
-
-                <p className="text-[1.05rem] leading-relaxed text-zinc-600 dark:text-zinc-400">
-                  {project.description}
-                </p>
-
-                {/* Research Note - The "Academic" Touch */}
-                <div className="pl-4 border-l-2 border-blue-500/20 italic text-sm text-zinc-500">
-                  <span className="font-mono text-[10px] not-italic uppercase tracking-widest block mb-1 opacity-50">Engineering Note:</span>
-                  "{project.research_note}"
-                </div>
-
-                {/* Tech Manifest */}
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tech.map(t => (
-                    <span key={t} className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-[10px] font-mono opacity-70 uppercase">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-
-                <Link href={project.link} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">
-                  View Repository &rarr;
-                </Link>
-              </article>
-            ))}
+        {/* Page Header */}
+        <header className="mb-20 space-y-6">
+          <h1 className="text-5xl font-medium italic tracking-tighter dark:text-white">
+            Project Archives
+          </h1>
+          <div className="max-w-2xl text-lg opacity-70 italic leading-relaxed">
+            <p>
+              A selection of engineering artifacts and functional systems developed between 2024 and 2026.
+              Each project serves as a case study in scalable architecture and user-centric design.
+            </p>
           </div>
-        </main>
-      </div>
-    );
-  }
+        </header>
+
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+          {projects.map((project, idx) => (
+            <article key={idx} className="group space-y-6 border-t border-zinc-200 dark:border-zinc-800 pt-8">
+              <div className="flex justify-between items-start">
+                <div>
+                  <h2 className="text-3xl font-medium tracking-tight group-hover:text-blue-600 dark:text-zinc-100 dark:group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h2>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] opacity-40">
+                    {project.category}
+                  </span>
+                </div>
+                <span className="font-mono text-sm opacity-30">{project.period}</span>
+              </div>
+
+              <p className="text-[1.05rem] leading-relaxed text-zinc-600 dark:text-zinc-400">
+                {project.description}
+              </p>
+
+              {/* Research Note - The "Academic" Touch */}
+              <div className="pl-4 border-l-2 border-blue-500/20 italic text-sm text-zinc-500">
+                <span className="font-mono text-[10px] not-italic uppercase tracking-widest block mb-1 opacity-50">Engineering Note:</span>
+                "{project.research_note}"
+              </div>
+
+              {/* Tech Manifest */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                {project.tech.map(t => (
+                  <span key={t} className="px-2 py-0.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-[10px] font-mono opacity-70 uppercase">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <Link href={project.link} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">
+                View Repository &rarr;
+              </Link>
+            </article>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
