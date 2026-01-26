@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import React from 'react';
 
 // Example data structure from your SQLite 'blogs' table
@@ -19,9 +20,9 @@ export default function BlogPost() {
 
         {/* Breadcrumb / Back Navigation */}
         <nav className="mb-12">
-          <a href="/blogs" className="font-mono text-[10px] uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2">
+          <Link href="/blogs" className="font-mono text-[10px] uppercase tracking-widest opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2">
             ← Back to Archive
-          </a>
+          </Link>
         </nav>
 
         {/* Post Metadata Header */}

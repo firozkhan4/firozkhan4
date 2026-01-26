@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { socialLink } from '../meta';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -68,11 +69,11 @@ export default function Home() {
             <ul className="space-y-3">
               <li className="flex gap-4 text-sm items-baseline">
                 <span className="font-mono opacity-30 text-[10px] shrink-0">2026.01.16</span>
-                <a href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">MySQL Replication Internals</a>
+                <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">MySQL Replication Internals</Link>
               </li>
               <li className="flex gap-4 text-sm items-baseline">
                 <span className="font-mono opacity-30 text-[10px] shrink-0">2025.12.29</span>
-                <a href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">Bloom Filters</a>
+                <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">Bloom Filters</Link>
               </li>
             </ul>
           </div>
@@ -82,11 +83,11 @@ export default function Home() {
             <ul className="space-y-3">
               <li className="flex gap-4 text-sm items-baseline">
                 <span className="font-mono opacity-30 text-[10px] shrink-0">SYSTEM</span>
-                <a href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">School Management System</a>
+                <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">School Management System</Link>
               </li>
               <li className="flex gap-4 text-sm items-baseline">
                 <span className="font-mono opacity-30 text-[10px] shrink-0">SOCIAL</span>
-                <a href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">QnA-Hub (Stack Overflow Clone)</a>
+                <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">QnA-Hub (Stack Overflow Clone)</Link>
               </li>
             </ul>
           </div>
@@ -98,13 +99,13 @@ export default function Home() {
 
 function SocialLink({ href, label, count }: { href: string; label: string; count: string }) {
   return (
-    <a
+    <Link
       href={href}
       target='_blank'
       className="flex items-center gap-2 px-3 py-2 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors"
     >
       <span className="font-medium">{label}</span>
       <span className="opacity-40 text-[10px]">({count})</span>
-    </a>
+    </Link>
   );
 }

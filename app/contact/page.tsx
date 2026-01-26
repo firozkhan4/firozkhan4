@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import { socialLink } from "../meta";
 
 
@@ -32,12 +33,12 @@ export default function Contact() {
               <h2 className="font-mono text-xs uppercase tracking-[0.2em] mb-6 opacity-50 dark:text-zinc-500">
                 Electronic Mail
               </h2>
-              <a
+              <Link
                 href="mailto:firozkhan907979@gmail.com"
                 className="text-2xl font-medium hover:text-blue-600 dark:text-zinc-200 dark:hover:text-blue-400 underline decoration-zinc-300 underline-offset-8 transition-colors"
               >
                 firozkhan907979@gmail.com
-              </a>
+              </Link>
             </div>
 
             <div>
@@ -85,10 +86,10 @@ export default function Contact() {
 function ContactLink({ href, platform, detail }: { href: string; platform: string; detail: string }) {
   return (
     <li>
-      <a href={href} className="group flex justify-between items-baseline border-b border-zinc-100 dark:border-zinc-900 pb-2 hover:border-blue-400 transition-colors">
+      <Link href={href} className="group flex justify-between items-baseline border-b border-zinc-100 dark:border-zinc-900 pb-2 hover:border-blue-400 transition-colors">
         <span className="text-lg font-medium dark:text-zinc-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">{platform}</span>
         <span className="font-mono text-[10px] uppercase opacity-30 tracking-widest">{detail}</span>
-      </a>
+      </Link>
     </li>
   );
 }

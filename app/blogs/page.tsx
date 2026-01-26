@@ -37,7 +37,7 @@ export default function Blogs() {
             </p>
             <p className="text-sm italic">
               If you find my writings helpful, consider subscribing to my
-              <a href="/feed.xml" className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-4 ml-1">RSS feed</a>.
+              <Link href="/feed.xml" className="text-blue-600 dark:text-blue-400 hover:underline underline-offset-4 ml-1">RSS feed</Link>.
             </p>
           </div>
         </header>
@@ -47,7 +47,7 @@ export default function Blogs() {
           <ul className="divide-y divide-zinc-100 dark:divide-zinc-900">
             {blogs.map((blog, idx) => (
               <li key={idx} className="group py-4">
-                <a href={blog.link} className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
+                <Link href={blog.link} className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
                   {/* Monospace Metadata */}
                   <span className="font-mono text-[13px] opacity-40 tabular-nums shrink-0 w-28 dark:text-zinc-500">
                     {blog.date}
@@ -60,7 +60,7 @@ export default function Blogs() {
                   <span className="text-[18px] font-medium tracking-tight text-blue-600 dark:text-blue-400 group-hover:underline decoration-[0.5px] underline-offset-4">
                     {blog.title}
                   </span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

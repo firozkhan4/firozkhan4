@@ -1,5 +1,7 @@
 'use client'
 
+import Link from "next/link";
+
 
 const projects = [
   {
@@ -75,9 +77,9 @@ export default function Projects() {
                 ))}
               </div>
 
-              <a href={project.link} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">
+              <Link href={project.link} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">
                 View Repository &rarr;
-              </a>
+              </Link>
             </article>
           ))}
         </div>

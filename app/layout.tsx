@@ -10,13 +10,18 @@ const newsreader = Newsreader({
 })
 
 
+// Define your production URL here
+const siteUrl = process.env.NODE_ENV === 'production'
+  ? 'https://firozkhan4.vercel.app'
+  : 'http://localhost:3000';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl), // This solves the warning
   title: {
     default: "Firoz Khan | Software Engineer",
     template: "%s | Firoz Khan"
   },
-  description: "Backend Developer specializing in scalable architectures, database internals, and distributed systems. BCA candidate at Career Point University.",
+  description: "Backend Developer specializing in scalable architectures, database internals, and distributed systems.",
   keywords: [
     "Firoz Khan",
     "Backend Developer",
@@ -30,13 +35,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://firozkhan.com", // Replace with your domain
+    url: siteUrl,
     siteName: "Firoz Khan",
     title: "Firoz Khan | Technical Research & Engineering",
     description: "Documenting thoughts on database internals, career growth, and scalable systems.",
     images: [
       {
-        url: "/og-image.png", // Create a minimalist OG image
+        url: "/hero.jpg",
         width: 1200,
         height: 630,
         alt: "Firoz Khan Portfolio",
@@ -47,9 +52,16 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Firoz Khan",
     description: "Software Engineer & Backend Enthusiast",
-    creator: "@yourusername", // Your X handle
+    creator: "@firozkhan_4", // Update this with your actual handle
+    images: ["/hero.jpg"],
   },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
+
+
 
 
 export default function RootLayout({
