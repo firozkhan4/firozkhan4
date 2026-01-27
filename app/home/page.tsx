@@ -62,38 +62,59 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Recent Activity Teaser (Academic Index Style) */}
-        <section className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-zinc-100  dark:border-white pt-12">
-          <div>
-            <h3 className="font-mono text-xs uppercase tracking-[0.2em] mb-6 opacity-50">Recent blog posts</h3>
-            <ul className="space-y-3">
-              <li className="flex gap-4 text-sm items-baseline">
-                <span className="font-mono opacity-30 text-[10px] shrink-0">2026.01.16</span>
-                <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">MySQL Replication Internals</Link>
-              </li>
-              <li className="flex gap-4 text-sm items-baseline">
-                <span className="font-mono opacity-30 text-[10px] shrink-0">2025.12.29</span>
-                <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">Bloom Filters</Link>
-              </li>
-            </ul>
-          </div>
 
-          <div>
-            <h3 className="font-mono text-xs uppercase tracking-[0.2em] mb-6 opacity-50">Key Projects</h3>
-            <ul className="space-y-3">
-              <li className="flex gap-4 text-sm items-baseline">
-                <span className="font-mono opacity-30 text-[10px] shrink-0">SYSTEM</span>
-                <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">School Management System</Link>
-              </li>
-              <li className="flex gap-4 text-sm items-baseline">
-                <span className="font-mono opacity-30 text-[10px] shrink-0">SOCIAL</span>
-                <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">QnA-Hub (Stack Overflow Clone)</Link>
-              </li>
-            </ul>
+        <section className="mt-24 pt-12 border-t border-zinc-200 dark:border-zinc-800">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            {/* Category: Languages */}
+            <div className="space-y-4">
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] opacity-40">Core Languages</h3>
+              <ul className="space-y-2 text-[15px] font-medium">
+                <li className="flex items-center gap-2">Java <span className="text-[10px] opacity-30 font-mono">JDK</span></li>
+                <li className="flex items-center gap-2">JavaScript <span className="text-[10px] opacity-30 font-mono">JS</span></li>
+                <li className="flex items-center gap-2">TypeScript <span className="text-[10px] opacity-30 font-mono">TS</span></li>
+                <li className="flex items-center gap-2">SQL <span className="text-[10px] opacity-30 font-mono">ANSI</span></li>
+              </ul>
+            </div>
+
+            {/* Category: Frameworks */}
+            <div className="space-y-4">
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] opacity-40">Frameworks & Libs</h3>
+              <ul className="space-y-2 text-[15px] font-medium">
+                <li>Spring Boot</li>
+                <li>Node.js / Express</li>
+                <li>Next.js / React</li>
+                <li>Redux / Zustand</li>
+              </ul>
+            </div>
+
+            {/* Category: Infrastructure */}
+            <div className="space-y-4">
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] opacity-40">Infrastructure</h3>
+              <ul className="space-y-2 text-[15px] font-medium">
+                <li>AWS</li>
+                <li>Linux <span className="italic font-newsreader font-normal text-xs opacity-60">(RHEL)</span></li>
+                <li>PostgreSQL / MongoDB</li>
+                <li>Kafka / Redis</li>
+              </ul>
+            </div>
+
+            {/* Category: Methodology */}
+            <div className="space-y-4">
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] opacity-40">Methodology</h3>
+              <ul className="space-y-2 text-[15px] font-medium italic opacity-80">
+                <li>RESTful API Design</li>
+                <li>System Architecture</li>
+                <li>Test Driven Dev</li>
+                <li>CI/CD Pipelines</li>
+              </ul>
+            </div>
+
           </div>
         </section>
+
       </main>
-    </div>
+    </div >
   );
 }
 
@@ -108,4 +129,38 @@ function SocialLink({ href, label, count }: { href: string; label: string; count
       <span className="opacity-40 text-[10px]">({count})</span>
     </Link>
   );
+}
+
+function RecentlySection() {
+  return (
+    <section className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-zinc-100  dark:border-white pt-12">
+      <div>
+        <h3 className="font-mono text-xs uppercase tracking-[0.2em] mb-6 opacity-50">Recent blog posts</h3>
+        <ul className="space-y-3">
+          <li className="flex gap-4 text-sm items-baseline">
+            <span className="font-mono opacity-30 text-[10px] shrink-0">2026.01.16</span>
+            <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">MySQL Replication Internals</Link>
+          </li>
+          <li className="flex gap-4 text-sm items-baseline">
+            <span className="font-mono opacity-30 text-[10px] shrink-0">2025.12.29</span>
+            <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">Bloom Filters</Link>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="font-mono text-xs uppercase tracking-[0.2em] mb-6 opacity-50">Key Projects</h3>
+        <ul className="space-y-3">
+          <li className="flex gap-4 text-sm items-baseline">
+            <span className="font-mono opacity-30 text-[10px] shrink-0">SYSTEM</span>
+            <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">School Management System</Link>
+          </li>
+          <li className="flex gap-4 text-sm items-baseline">
+            <span className="font-mono opacity-30 text-[10px] shrink-0">SOCIAL</span>
+            <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">QnA-Hub (Stack Overflow Clone)</Link>
+          </li>
+        </ul>
+      </div>
+    </section>
+  )
 }
