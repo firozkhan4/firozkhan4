@@ -42,6 +42,7 @@ export function Header() {
     { name: "Experience", link: "/experience" },
     { name: "Projects", link: "/projects" },
     { name: "Blogs", link: "/blogs" },
+    { name: "Certifications", link: "/certifications" },
     { name: "Contact", link: "/contact" },
   ];
 
