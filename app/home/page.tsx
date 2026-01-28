@@ -42,7 +42,7 @@ export default function Home() {
 
             {/* Action Buttons / Socials */}
             <div className="flex flex-wrap gap-3 pt-4 font-mono">
-              <SocialLink href={"FirozKhan_Java.pdf"} label="Resume" count="View" />
+              <SocialLink href={socialLink.resume} label="Resume" count="View" />
               <SocialLink href={socialLink.linkedin} label="LinkedIn" count="Connect" />
               <SocialLink href={socialLink.github} label="GitHub" count="Projects" />
               <SocialLink href={socialLink.twitter} label="Twitter" count="Builds" />
