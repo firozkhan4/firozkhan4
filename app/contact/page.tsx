@@ -34,10 +34,10 @@ export default function Contact() {
                 Electronic Mail
               </h2>
               <Link
-                href="mailto:firozkhan907979@gmail.com"
+                href="mailto:firozkhan4.contact@gmail.com"
                 className="text-2xl font-medium hover:text-blue-600 dark:text-zinc-200 dark:hover:text-blue-400 underline decoration-zinc-300 underline-offset-8 transition-colors"
               >
-                firozkhan907979@gmail.com
+                firozkhan4.contact@gmail.com
               </Link>
             </div>
 
