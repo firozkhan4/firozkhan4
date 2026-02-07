@@ -22,7 +22,7 @@ export default function Home() {
               </h2>
             </header>
 
-            <div className="max-w-2xl space-y-6 text-[1.1rem] leading-relaxed text-zinc-700 dark:text-zinc-300">
+            <div className="max-w-2xl space-y-6 text-[1.1rem] leading-relaxed text-zinc-700 dark:text-zinc-300 text-justify">
               <p>
                 I am a software engineer passionate about <span className="text-ink dark:text-white font-medium">Backend Architectures</span> and System Design.
                 Recently, I served as a Backend Development Intern at <span className="italic">Tresveze & Co.</span>,
