@@ -1,22 +1,32 @@
-'use client'
-
+import MarkdownRenderer from '@/app/components/MarkdownRenderer';
 import Link from 'next/link';
-import React from 'react';
 
-// Example data structure from your SQLite 'blogs' table
-const blogPost = {
-  title: "MySQL Replication Internals: The Binlog & Relay Log",
-  date: "2026.01.16",
-  category: "Databases",
-  readingTime: "12 min read",
-  content: `## Introduction
-  In distributed systems, replication is a fundamental concept...`, // This would be your Markdown string
-};
+interface BlogPost {
+  _id?: string;
+  title?: string;
+  date?: string;
+  category?: string;
+  readingTime?: string;
+  content?: string;
+}
 
-export default function BlogPost() {
+// Fetch logic moved to a standard function
+async function getBlogPost(id: string) {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${id}`, {
+    cache: 'no-store' // or next: { revalidate: 3600 }
+  });
+
+  if (!res.ok) return null;
+  return res.json();
+}
+
+export default async function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const blog: BlogPost | null = await getBlogPost(id);
+
   return (
     <article className="min-h-screen font-newsreader dark:text-white bg-paper text-ink dark:bg-[#121212] transition-colors duration-300">
-      <main className="container mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <main className="container mx-auto max-w-7xl px-6 py-16 md:py-24">
 
         {/* Breadcrumb / Back Navigation */}
         <nav className="mb-12">
@@ -29,14 +39,14 @@ export default function BlogPost() {
         <header className="mb-16 space-y-6 border-b border-zinc-100 dark:border-zinc-900 pb-12">
           <div className="space-y-2">
             <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-widest opacity-50">
-              <span>{blogPost.date}</span>
+              <span>{blog?.date}</span>
               <span>/</span>
-              <span>{blogPost.category}</span>
+              <span>{blog?.category}</span>
               <span>/</span>
-              <span>{blogPost.readingTime}</span>
+              <span>{blog?.readingTime}</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-medium italic tracking-tight leading-[1.1] dark:text-white">
-              {blogPost.title}
+            <h1 className="text-4xl md:text-5xl font-medium italic tracking-tight leading-[1.1] dark:text-white pt-6">
+              {blog?.title}
             </h1>
           </div>
         </header>
@@ -49,30 +59,10 @@ export default function BlogPost() {
           prose-code:px-1 prose-code:rounded prose-code:before:content-none prose-code:after:content-none
           prose-strong:text-ink dark:prose-strong:text-white">
 
-          {/* Content would be rendered here via a Markdown parser */}
-          <div className="space-y-8">
-            <p>
-              Replication is the process of sharing information so as to ensure consistency
-              between redundant resources. In the context of MySQL, this primarily happens
-              through the binary log (binlog).
-            </p>
+          <MarkdownRenderer content={blog?.content || ""} />
 
-            <h2 className="text-2xl mt-12 mb-4">The Binary Log Architecture</h2>
-
-            <pre className="bg-zinc-950 text-zinc-100 p-6 rounded-lg font-mono text-sm overflow-x-auto border border-zinc-800">
-              {`SHOW BINARY LOGS;
--- Demonstrating database internals mastery`}
-            </pre>
-
-            <p>
-              By analyzing the binlog events, we can see exactly how the master coordinates
-              writes with the replicas. This is crucial for maintaining data integrity
-              in high-scale environments like those I explored during my internship.
-            </p>
-          </div>
         </section>
 
-        {/* Academic Footer / Citation Style */}
         <footer className="mt-24 pt-12 border-t border-zinc-200 dark:border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div className="space-y-2">
@@ -85,7 +75,6 @@ export default function BlogPost() {
             </button>
           </div>
         </footer>
-
       </main>
     </article>
   );
