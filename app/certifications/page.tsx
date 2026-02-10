@@ -16,12 +16,9 @@ interface Certificate {
 /* ---------------- Fetcher ---------------- */
 
 const fetchCertifications = async (): Promise<Certificate[]> => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/certificates`,
-    {
-      cache: 'no-store', // Prevent Next.js cache conflicts
-    }
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/certificates`, {
+    cache: 'no-store', // Prevent Next.js cache conflicts
+  });
 
   if (!res.ok) {
     throw new Error(`Failed: ${res.status}`);

@@ -10,17 +10,34 @@ interface Blog {
   link: string
 }
 
-export default function Blogs() {
+const fetchBlogPosts = async (): Promise<Blog[]> => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
+    cache: 'no-store', // Prevent Next.js cache conflicts
+  })
 
-  const fetchBlogPosts = async (): Promise<Blog[]> => {
-    const res = await fetch('/api/blogs')
-
-    if (!res.ok) {
-      throw new Error('Failed to fetch Blog Posts')
-    }
-
-    return res.json()
+  if (!res.ok) {
+    throw new Error('Failed to fetch Blog Posts')
   }
+
+  return res.json()
+}
+
+const SkeletonRow = () => (
+  <li className="py-4 animate-pulse flex gap-6">
+
+    {/* Date Skeleton */}
+    <div className="w-24 h-4 bg-zinc-200 dark:bg-zinc-800 rounded" />
+
+    {/* Separator */}
+    <div className="hidden md:block w-2 h-4 bg-zinc-200 dark:bg-zinc-800 rounded" />
+
+    {/* Title Skeleton */}
+    <div className="flex-1 h-5 bg-zinc-200 dark:bg-zinc-800 rounded" />
+
+  </li>
+)
+
+export default function Blogs() {
 
   const {
     data: blogs = [],
@@ -30,25 +47,14 @@ export default function Blogs() {
   } = useQuery<Blog[]>({
     queryKey: ['apiBlogPost'],
     queryFn: fetchBlogPosts,
+
+    // Performance tuning
+    staleTime: 5 * 60 * 1000,
+    gcTime: 10 * 60 * 1000,
+
+    retry: 2,
+    refetchOnWindowFocus: false,
   })
-
-  /* ----------------------------------
-     Skeleton Loader Component
-  ---------------------------------- */
-  const SkeletonRow = () => (
-    <li className="py-4 animate-pulse flex gap-6">
-
-      {/* Date Skeleton */}
-      <div className="w-24 h-4 bg-zinc-200 dark:bg-zinc-800 rounded" />
-
-      {/* Separator */}
-      <div className="hidden md:block w-2 h-4 bg-zinc-200 dark:bg-zinc-800 rounded" />
-
-      {/* Title Skeleton */}
-      <div className="flex-1 h-5 bg-zinc-200 dark:bg-zinc-800 rounded" />
-
-    </li>
-  )
 
   return (
     <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300">

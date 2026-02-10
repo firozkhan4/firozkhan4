@@ -10,10 +10,9 @@ interface BlogPost {
   content?: string;
 }
 
-// Fetch logic moved to a standard function
 async function getBlogPost(id: string) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs/${id}`, {
-    cache: 'no-store' // or next: { revalidate: 3600 }
+    cache: 'no-store'
   });
 
   if (!res.ok) return null;
