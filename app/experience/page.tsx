@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react';
-
 const experiences = [
   {
     period: "Apr 2025 – Aug 2025",
@@ -12,7 +10,7 @@ const experiences = [
     stack: ["Node.js", "Express", "PostgreSQL", "Redis"]
   },
   {
-    period: "Jan 2024 – Mar 2024",
+    period: "June 2024 – July 2024",
     role: "Frontend Development Intern",
     company: "Grass Solution Pvt Ltd",
     location: "Remote",
