@@ -56,6 +56,7 @@ export default function Blogs() {
     refetchOnWindowFocus: false,
   })
 
+
   return (
     <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300">
       <main className="container mx-auto max-w-7xl px-6 py-16 md:py-24">

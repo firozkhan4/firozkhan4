@@ -13,7 +13,7 @@ const newsreader = Newsreader({
 
 // Define your production URL here
 const siteUrl = process.env.NODE_ENV === 'production'
-  ? 'https://firozkhan4.vercel.app'
+  ? 'https://firozkhan4.in'
   : 'http://localhost:3000';
 
 export const metadata: Metadata = {
