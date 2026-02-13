@@ -67,6 +67,7 @@ const projects = [
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
           {projects.map((project, idx) => {
+            const liveLinkActive = project.link !== "#"
             return <article key={idx} className="group space-y-6 border-t border-zinc-200 dark:border-zinc-800 pt-8">
               <div className="flex justify-between items-start">
                 <div>
@@ -102,7 +103,7 @@ const projects = [
                 <Link href={project.github} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">
                   View Repository &rarr;
                 </Link>
-                <Link href={project.link} className="inline-block pt-4 text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1">Live Demo &rarr;</Link>
+                <Link href={project.link} className={`inline-block pt-4 ${liveLinkActive ? 'visible' : 'invisible'} text-sm font-mono uppercase tracking-widest hover:underline underline-offset-8 decoration-1`}>Live Demo &rarr;</Link>
               </div>
             </article>
           })}
