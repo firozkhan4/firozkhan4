@@ -51,7 +51,7 @@ export default function Home() {
 
           {/* Right Column: Profile Image */}
           <div className="relative group flex items-center h-full">
-            <div className="overflow-hidden rounded-2xl  border border-zinc-200 dark:border-zinc-800 object-center aspect-auto">
+            <div className="overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800 object-center aspect-auto lg:scale-125">
               <img
                 src="https://firozkhan4.s3.ap-south-1.amazonaws.com/hero.jpg"
                 alt="Firoz Khan"
