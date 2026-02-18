@@ -1,5 +1,7 @@
+'use client';
+
 import Link from "next/link";
-import { socialLink } from "../meta";
+import profileLink from "../data/profileLink.json"
 
 export default function Footer() {
   return (
@@ -19,9 +21,9 @@ export default function Footer() {
         {/* Links Section - Enhanced Interactivity */}
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2">
           {[
-            { name: "GitHub", href: socialLink.github },
-            { name: "LinkedIn", href: socialLink.linkedin },
-            { name: "Twitter", href: socialLink.twitter },
+            { name: "GitHub", href: profileLink.github },
+            { name: "LinkedIn", href: profileLink.linkedin },
+            { name: "Twitter", href: profileLink.twitter },
             { name: "RSS", href: "/feed.xml" },
           ].map((link) => (
             <Link

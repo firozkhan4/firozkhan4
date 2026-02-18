@@ -3,7 +3,6 @@ import { Newsreader } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
 import Footer from "./components/Footer";
-import Providers from "./providers";
 
 const newsreader = Newsreader({
   variable: "--font-newsreader",
@@ -12,9 +11,7 @@ const newsreader = Newsreader({
 
 
 // Define your production URL here
-const siteUrl = process.env.NODE_ENV === 'production'
-  ? 'https://firozkhan4.in'
-  : 'http://localhost:3000';
+const siteUrl = 'https://firozkhan4.in'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl), // This solves the warning
@@ -63,8 +60,6 @@ export const metadata: Metadata = {
 };
 
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -76,11 +71,9 @@ export default function RootLayout({
       <body
         className={`${newsreader.variable} ${newsreader.variable} antialiased`}
       >
-        <Providers>
           <Header />
           {children}
           <Footer />
-        </Providers>
       </body>
     </html>
   );
