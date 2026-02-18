@@ -1,10 +1,12 @@
 'use client'
 
-import Image from 'next/image';
 import { socialLink } from '../meta';
 import Link from 'next/link';
+import profileLink from "../data/profileLink.json";
+import { useState } from 'react';
 
 export default function Home() {
+
   return (
     <div className="flex flex-col min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] dark:text-zinc-100 selection:bg-zinc-200 dark:selection:bg-zinc-800">
 
@@ -43,9 +45,9 @@ export default function Home() {
             {/* Action Buttons / Socials */}
             <div className="flex flex-wrap gap-3 pt-4 font-mono">
               <SocialLink href={socialLink.resume} label="Resume" count="View" />
-              <SocialLink href={socialLink.linkedin} label="LinkedIn" count="Connect" />
-              <SocialLink href={socialLink.github} label="GitHub" count="Projects" />
-              <SocialLink href={socialLink.twitter} label="Twitter" count="Builds" />
+              <SocialLink href={profileLink.linkedin} label="LinkedIn" count="Connect" />
+              <SocialLink href={profileLink.github} label="GitHub" count="Projects" />
+              <SocialLink href={profileLink.twitter} label="Twitter" count="Builds" />
             </div>
           </div>
 
@@ -129,36 +131,3 @@ function SocialLink({ href, label, count }: { href: string; label: string; count
   );
 }
 
-function RecentlySection() {
-  return (
-    <section className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-zinc-100  dark:border-white pt-12">
-      <div>
-        <h3 className="font-mono text-xs uppercase tracking-[0.2em] mb-6 opacity-50">Recent blog posts</h3>
-        <ul className="space-y-3">
-          <li className="flex gap-4 text-sm items-baseline">
-            <span className="font-mono opacity-30 text-[10px] shrink-0">2026.01.16</span>
-            <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">MySQL Replication Internals</Link>
-          </li>
-          <li className="flex gap-4 text-sm items-baseline">
-            <span className="font-mono opacity-30 text-[10px] shrink-0">2025.12.29</span>
-            <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">Bloom Filters</Link>
-          </li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 className="font-mono text-xs uppercase tracking-[0.2em] mb-6 opacity-50">Key Projects</h3>
-        <ul className="space-y-3">
-          <li className="flex gap-4 text-sm items-baseline">
-            <span className="font-mono opacity-30 text-[10px] shrink-0">SYSTEM</span>
-            <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">School Management System</Link>
-          </li>
-          <li className="flex gap-4 text-sm items-baseline">
-            <span className="font-mono opacity-30 text-[10px] shrink-0">SOCIAL</span>
-            <Link href="#" className="hover:text-blue-500 underline decoration-zinc-200 underline-offset-4">QnA-Hub (Stack Overflow Clone)</Link>
-          </li>
-        </ul>
-      </div>
-    </section>
-  )
-}

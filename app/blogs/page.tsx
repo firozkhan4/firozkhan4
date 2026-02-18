@@ -1,61 +1,19 @@
 'use client'
 
-import { useQuery } from '@tanstack/react-query'
 import Link from 'next/link'
+import data from "../data/blogs.json"
+import { useState } from 'react'
 
 interface Blog {
   _id: string
   title: string
   date: string
-  link: string
+  link?: string
 }
-
-const fetchBlogPosts = async (): Promise<Blog[]> => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`, {
-    cache: 'no-store', // Prevent Next.js cache conflicts
-  })
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch Blog Posts')
-  }
-
-  return res.json()
-}
-
-const SkeletonRow = () => (
-  <li className="py-4 animate-pulse flex gap-6">
-
-    {/* Date Skeleton */}
-    <div className="w-24 h-4 bg-zinc-200 dark:bg-zinc-800 rounded" />
-
-    {/* Separator */}
-    <div className="hidden md:block w-2 h-4 bg-zinc-200 dark:bg-zinc-800 rounded" />
-
-    {/* Title Skeleton */}
-    <div className="flex-1 h-5 bg-zinc-200 dark:bg-zinc-800 rounded" />
-
-  </li>
-)
 
 export default function Blogs() {
 
-  const {
-    data: blogs = [],
-    isLoading,
-    isError,
-    error
-  } = useQuery<Blog[]>({
-    queryKey: ['apiBlogPost'],
-    queryFn: fetchBlogPosts,
-
-    // Performance tuning
-    staleTime: 5 * 60 * 1000,
-    gcTime: 10 * 60 * 1000,
-
-    retry: 2,
-    refetchOnWindowFocus: false,
-  })
-
+  const [blogs,setBlogs] = useState<Blog[]>(data)
 
   return (
     <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300">
@@ -91,45 +49,8 @@ export default function Blogs() {
 
           <ul className="divide-y divide-zinc-100 dark:divide-zinc-900">
 
-            {/* ----------------------------------
-               Loading Skeleton
-            ---------------------------------- */}
-            {isLoading &&
-              Array.from({ length: 6 }).map((_, i) => (
-                <SkeletonRow key={i} />
-              ))
-            }
-
-            {/* ----------------------------------
-               Error State
-            ---------------------------------- */}
-            {isError && (
-              <li className="py-12 text-center text-red-500">
-                {error.message}
-              </li>
-            )}
-
-            {/* ----------------------------------
-               Empty State
-            ---------------------------------- */}
-            {!isLoading && !isError && blogs.length === 0 && (
-              <li className="py-16 text-center text-zinc-500 dark:text-zinc-400">
-
-                <p className="text-lg font-medium">
-                  No blogs present
-                </p>
-
-                <p className="text-sm mt-2 opacity-70">
-                  Please check back later.
-                </p>
-
-              </li>
-            )}
-
-            {/* ----------------------------------
-               Blog List
-            ---------------------------------- */}
-            {!isLoading && !isError && blogs.map((blog, idx) => (
+          
+            {blogs.map((blog, idx) => (
 
               <li key={idx} className="group py-4">
 

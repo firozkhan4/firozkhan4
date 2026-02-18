@@ -1,51 +1,22 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
+import data from "../data/certifications.json"
+import { useState } from 'react';
 
-interface Certificate {
-  _id: string;
+interface Certification {
   title: string;
   issuer: string;
   date: string;
-  link: string;
-  skills: string;
   certificateId: string;
+  skills: string[];
+  link: string;
 }
 
-/* ---------------- Fetcher ---------------- */
-
-const fetchCertifications = async (): Promise<Certificate[]> => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/certificates`, {
-    cache: 'no-store', // Prevent Next.js cache conflicts
-  });
-
-  if (!res.ok) {
-    throw new Error(`Failed: ${res.status}`);
-  }
-
-  return res.json();
-};
-
-/* ---------------- Component ---------------- */
-
 export default function Certifications() {
-  const {
-    data: certifications = [],
-    isLoading,
-    isError,
-    error,
-  } = useQuery<Certificate[]>({
-    queryKey: ['certifications'],
-    queryFn: fetchCertifications,
 
-    // Performance tuning
-    staleTime: 5 * 60 * 1000,
-    gcTime: 10 * 60 * 1000,
+  const [certifications, setCertifications] = useState<Certification[]>(data)
 
-    retry: 2,
-    refetchOnWindowFocus: false,
-  });
 
   return (
     <div className="min-h-screen antialiased dark:text-white font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300">
@@ -65,58 +36,22 @@ export default function Certifications() {
           </div>
         </header>
 
-        {/* Loading */}
-        {isLoading && <SkeletonGrid />}
 
-        {/* Error */}
-        {isError && (
-          <div className="text-red-500 font-mono text-sm uppercase tracking-widest">
-            Error: {(error as Error).message}
-          </div>
-        )}
-
-        {/* Empty */}
-        {!isLoading && !isError && certifications.length === 0 && (
-          <div className="opacity-40 font-mono text-sm uppercase tracking-widest">
-            No certifications found.
-          </div>
-        )}
-
-        {/* Data */}
-        {!isLoading && !isError && certifications.length > 0 && (
+        {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {certifications.map((cert) => (
-              <CertificationCard key={cert._id} cert={cert} />
+              <CertificationCard key={cert.certificateId} {...cert} />
             ))}
           </div>
-        )}
+        }
 
       </main>
     </div>
   );
 }
 
-/* ---------------- Skeleton ---------------- */
 
-function SkeletonGrid() {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {[...Array(4)].map((_, i) => (
-        <div
-          key={i}
-          className="h-64 bg-zinc-100 dark:bg-zinc-900/50 animate-pulse border border-zinc-200 dark:border-zinc-800"
-        />
-      ))}
-    </div>
-  );
-}
-
-/* ---------------- Card ---------------- */
-
-function CertificationCard({ cert }: { cert: Certificate }) {
-  const skillList = cert.skills
-    .split(',')
-    .map((s) => s.trim());
+function CertificationCard({ issuer, date, title, certificateId, skills, link }: Certification) {
 
   return (
     <article className="group flex flex-col justify-between p-8 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 transition-all bg-white/50 dark:bg-zinc-900/30">
@@ -124,26 +59,26 @@ function CertificationCard({ cert }: { cert: Certificate }) {
       <div>
         <div className="flex justify-between items-start mb-4">
           <span className="font-mono text-[10px] uppercase tracking-widest opacity-40">
-            {cert.issuer}
+            {issuer}
           </span>
 
           <span className="font-mono text-[10px] opacity-30">
-            {cert.date}
+            {date}
           </span>
         </div>
 
         <h2 className="text-2xl font-medium tracking-tight mb-2 dark:text-zinc-100 italic">
-          {cert.title}
+          {title}
         </h2>
 
         <div className="font-mono text-[11px] opacity-30 mb-6 tracking-tighter">
-          VERIFICATION_ID: {cert.certificateId}
+          VERIFICATION_ID: {certificateId}
         </div>
 
         <div className="flex flex-wrap gap-2 mb-8">
-          {skillList.map((skill) => (
+          {skills?.map((skill: any, idx: number) => (
             <span
-              key={skill}
+              key={idx}
               className="text-[10px] font-mono opacity-60 bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded uppercase"
             >
               {skill}
@@ -153,7 +88,7 @@ function CertificationCard({ cert }: { cert: Certificate }) {
       </div>
 
       <Link
-        href={cert.link}
+        href={`${link}`}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-auto w-fit flex items-center gap-2 px-4 py-2 border border-zinc-200 dark:border-zinc-800 text-[11px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all group/btn"

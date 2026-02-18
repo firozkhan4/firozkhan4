@@ -1,0 +1,30 @@
+[
+  {
+    "period": "Apr 2025 – Aug 2025",
+    "role": "Backend Development Intern",
+    "company": "Tresveze & Co.",
+    "location": "Remote",
+    "description": "Focused on architecting scalable server-side logic and optimizing API performance. Handled database migrations and microservice communication.",
+    "stack": [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Redis",
+      "Linux",
+      "Slack"
+    ]
+  },
+  {
+    "period": "June 2024 – July 2024",
+    "role": "Frontend Development Intern",
+    "company": "Grass Solution Pvt Ltd",
+    "location": "Remote",
+    "description": "Developed responsive user interfaces and integrated complex state management systems. Collaborated with design teams to translate wireframes into high-fidelity code.",
+    "stack": [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux"
+    ]
+  }
+]

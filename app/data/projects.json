@@ -1,0 +1,62 @@
+[
+  {
+    "title": "School Management System",
+    "category": "Full-Stack / Architecture",
+    "period": "2025",
+    "description": "A comprehensive administrative platform designed to streamline academic operations. Built with a focus on data integrity and high-performance backend logic.",
+    "tech": [
+      "SQL",
+      "Node.js",
+      "Express",
+      "React.js"
+    ],
+    "link": "#",
+    "github": "#",
+    "research_note": "Optimized database queries for 40% faster student record retrieval."
+  },
+  {
+    "title": "QnA-Hub",
+    "category": "Platform / Social",
+    "period": "2024",
+    "description": "A Stack Overflow clone facilitating community-driven knowledge exchange. Features include real-time voting, markdown support, and complex relational data mapping.",
+    "tech": [
+      "React.js",
+      "Spring Boot",
+      "Postman API",
+      "AWS",
+      "Tailwind CSS"
+    ],
+    "link": "#",
+    "github": "#",
+    "research_note": "Implemented advanced caching strategies for high-traffic question threads."
+  },
+  {
+    "title": "Word Count Tool",
+    "category": "System Utility / Performance",
+    "period": "2024",
+    "description": "A high-efficiency Java CLI tool for text analysis. Uses multithreading to process multiple files simultaneously, providing detailed metrics for lines, words, and UTF-8 byte sizes.",
+    "tech": [
+      "Java",
+      "Multithreading",
+      "File I/O"
+    ],
+    "link": "#",
+    "github": "https://github.com/firozkhan4/WordCount",
+    "research_note": "Leveraged concurrent execution to reduce processing time for large-scale datasets."
+  },
+  {
+    "title": "Sorting Visualizer",
+    "category": "Frontend / Algorithms",
+    "period": "2024",
+    "description": "An interactive web application visualizing 20+ sorting algorithms. Features real-time rendering of array manipulations, custom speed/size controls, and complex algorithmic logic.",
+    "tech": [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Algorithms"
+    ],
+    "link": "https://firozkhan4.github.io/Sorting-Visualizer",
+    "github": "https://github.com/firozkhan4/Sorting-Visualizer",
+    "research_note": "Managed asynchronous animation states to prevent UI blocking during intensive computations."
+  }
+]

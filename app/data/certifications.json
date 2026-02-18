@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Postman API Fundamentals",
+    "issuer": "Postman Student Expert",
+    "date": "2024",
+    "certificateId": "POST-7721",
+    "link": "https://drive.google.com/file/d/10LifjSt0OmTkJ4BrdysTttQoDBzL6Ukk/view?usp=drive_link",
+    "skills": ["API Testing, Documentation, Automation"]
+  },
+  {
+    "title": "Red Hat Enterprise Linux Fundamentals",
+    "issuer": "Red Hat",
+    "date": "2024",
+    "certificateId": "RH-8821",
+    "link": "https://drive.google.com/file/d/10H7CGWgmjrBRdPbau_qfZ_h3-NwDgFg2/view?usp=drive_link",
+    "skills": ["Shell Scripting, User Management, Networking"]
+  },
+  {
+    "title": "SQL Mastery Certificate",
+    "issuer": "Udemy",
+    "date": "2025",
+    "certificateId": "UC-SQL-101",
+    "link": "https://drive.google.com/file/d/1bIqkd_RgmCrvzJ3FVThpcRsUX3cmdqeb/view?usp=drive_link",
+    "skills": ["Database Design, Query Optimization, ACID Compliance"]
+  },
+  {
+    "title": "Advanced React.js Development",
+    "issuer": "Grras Solutions Pvt Ltd",
+    "date": "2024",
+    "link": "https://drive.google.com/file/d/1citxuAT3xQAXnBBxe_mRm3PV24HT9H9B/view?usp=drive_link",
+    "skills": ["React, Redux, MUI"],
+    "certificateId": "GRASS/JPR/2024-200"
+  },
+  {
+    "title": "English Certificate",
+    "issuer": "EF Set",
+    "date": "2025",
+    "link": "https://drive.google.com/file/d/1IyKyTnkTf3_ZWaN69bSoU7uGSD3Er3Fq/view?usp=drive_link",
+    "skills": ["English Communication"],
+    "certificateId": "f24BJw"
+  },
+  {
+    "title": "MERN Stack Developer",
+    "issuer": "Tresveze & Co.",
+    "date": "2025",
+    "link": "https://drive.google.com/file/d/1R9ZswUWTHjfTTUtgInHUGYShYML100gf/view?usp=drive_link",
+    "skills": ["Node.js, PostgreSQL, Express.js, Postman, REST API's"],
+    "certificateId": "MERN-2025"
+  },
+  {
+    "title": "AWS Services Fundamentals",
+    "issuer": "Simpli Learn",
+    "date": "2025",
+    "link": "https://drive.google.com/file/d/1Yp8XtrqrbPN-saVyQkuf3sxpbCKfNxKj/view?usp=drive_link",
+    "skills": ["EC2, S3, Lambda, IAM, RDS"],
+    "certificateId": "8883846"
+  }
+]

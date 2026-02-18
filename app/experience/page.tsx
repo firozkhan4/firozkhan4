@@ -1,25 +1,10 @@
 'use client'
 
-const experiences = [
-  {
-    period: "Apr 2025 – Aug 2025",
-    role: "Backend Development Intern",
-    company: "Tresveze & Co.",
-    location: "Remote",
-    description: "Focused on architecting scalable server-side logic and optimizing API performance. Handled database migrations and microservice communication.",
-    stack: ["Node.js", "Express", "PostgreSQL", "Redis"]
-  },
-  {
-    period: "June 2024 – July 2024",
-    role: "Frontend Development Intern",
-    company: "Grass Solution Pvt Ltd",
-    location: "Remote",
-    description: "Developed responsive user interfaces and integrated complex state management systems. Collaborated with design teams to translate wireframes into high-fidelity code.",
-    stack: ["React.js", "TypeScript", "Tailwind CSS", "Redux"]
-  }
-];
+import experiences from "../data/experiences.json"
+
 
 export default function Experience() {
+
   return (
     <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300 dark:text-white">
       <main className="container mx-auto max-w-7xl px-6 py-16 md:py-24">
@@ -65,7 +50,7 @@ export default function Experience() {
 
                 {/* Tech Tags: Monospace and Bordered */}
                 <div className="flex flex-wrap gap-2 pt-2">
-                  {exp.stack.map(tech => (
+                  {exp.stack?.map(tech => (
                     <span key={tech} className="px-2 py-0.5 border border-zinc-200 dark:border-zinc-800 rounded text-[10px] font-mono opacity-60 uppercase tracking-tighter">
                       {tech}
                     </span>

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { socialLink } from "../meta";
+import profileLink from "../data/profileLink.json"
 
 
 export default function Contact() {
@@ -46,9 +46,9 @@ export default function Contact() {
                 Digital Presence
               </h2>
               <ul className="space-y-4">
-                <ContactLink href={socialLink.linkedin} platform="LinkedIn" detail="Professional Network" />
-                <ContactLink href={socialLink.github} platform="GitHub" detail="Source Code" />
-                <ContactLink href={socialLink.twitter} platform="Twitter" detail="Technical Logs" />
+                <ContactLink href={profileLink.linkedin} platform="LinkedIn" detail="Professional Network" />
+                <ContactLink href={profileLink.github} platform="GitHub" detail="Source Code" />
+                <ContactLink href={profileLink.twitter} platform="Twitter" detail="Technical Logs" />
               </ul>
             </div>
           </div>
