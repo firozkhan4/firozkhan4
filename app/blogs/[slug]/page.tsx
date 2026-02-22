@@ -5,6 +5,7 @@ import MarkdownRenderer from '@/app/components/MarkdownRenderer';
 import Link from 'next/link';
 import blogs from "../../data/blogs.json"
 import { useParams } from 'next/navigation';
+import Sharebutton from "../../components/Sharebutton"
 
 export default function BlogPostPage() {
 
@@ -75,12 +76,7 @@ export default function BlogPostPage() {
               <p className="text-lg font-medium italic">Firoz Khan</p>
               <p className="text-sm opacity-60">Software Engineer & Backend Enthusiast</p>
             </div>
-            <button
-              onClick={() => navigator.clipboard.writeText(window.location.href)}
-              className="px-4 py-2 border border-zinc-200 dark:border-zinc-800 text-[10px] font-mono uppercase tracking-[0.2em] hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors"
-            >
-              Share Entry
-            </button>
+            <Sharebutton />
           </div>
         </footer>
       </main>
