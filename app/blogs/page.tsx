@@ -5,15 +5,16 @@ import data from "../data/blogs.json"
 import { useState } from 'react'
 
 interface Blog {
-  _id: string
-  title: string
-  date: string
-  link?: string
+  _id: string;
+  title: string;
+  date: string;
+  link?: string;
+  slug: string;
 }
 
 export default function Blogs() {
 
-  const [blogs,setBlogs] = useState<Blog[]>(data)
+  const [blogs, setBlogs] = useState<Blog[]>(data)
 
   return (
     <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300">
@@ -49,13 +50,13 @@ export default function Blogs() {
 
           <ul className="divide-y divide-zinc-100 dark:divide-zinc-900">
 
-          
+
             {blogs.map((blog, idx) => (
 
               <li key={idx} className="group py-4">
 
                 <Link
-                  href={`/blogs/${blog._id}`}
+                  href={`/blogs/${blog.slug}`}
                   className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6"
                 >
 

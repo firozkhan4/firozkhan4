@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { ToastContainer } from 'react-toastify';
 
 enum Theme {
   LIGHT = "light",
@@ -53,6 +54,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-200 bg-white/80 shadow-2xl backdrop-blur-3xl dark:border-zinc-800 dark:bg-[#292B37]">
+      <ToastContainer />
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-x-6 lg:gap-x-12">
           <Link href="/" className="text-lg sm:text-xl font-bold tracking-tighter hover:opacity-70 transition-opacity dark:text-white">
