@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Moon, Search, Sun, Menu, X } from 'lucide-react';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 enum Theme {
@@ -79,10 +79,6 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-x-3 sm:gap-x-6 dark:text-white">
-          <button className="hover:opacity-70 transition-opacity" aria-label="Search">
-            <Search size={20} />
-          </button>
-
           <button
             onClick={toggleTheme}
             className="rounded-full p-2 hover:bg-zinc-100 dark:hover:bg-zinc-400 transition-colors"
