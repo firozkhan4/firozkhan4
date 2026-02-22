@@ -1,20 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import data from "../data/blogs.json"
-import { useState } from 'react'
+import blogs from "../data/blogs.json"
 
-interface Blog {
-  _id: string;
-  title: string;
-  date: string;
-  link?: string;
-  slug: string;
-}
 
 export default function Blogs() {
-
-  const [blogs, setBlogs] = useState<Blog[]>(data)
 
   return (
     <div className="min-h-screen font-newsreader bg-paper text-ink dark:bg-[#121212] transition-colors duration-300">

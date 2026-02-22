@@ -6,16 +6,6 @@ import Link from 'next/link';
 import blogs from "../../data/blogs.json"
 import { useParams } from 'next/navigation';
 
-interface BlogPost {
-  _id?: string;
-  title?: string;
-  slug: string;
-  date?: string;
-  category?: string;
-  readingTime?: string;
-  content?: string;
-}
-
 export default function BlogPostPage() {
 
   const { slug } = useParams();
