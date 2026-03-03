@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://firozkhan4.in/sitemap.xml
