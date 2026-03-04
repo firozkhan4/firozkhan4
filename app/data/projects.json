@@ -15,6 +15,21 @@
     "research_note": "Optimized database queries for 40% faster student record retrieval."
   },
   {
+    "title": "Job Queue Service",
+    "category": "Backend / Infrastructure",
+    "period": "2025",
+    "description": "An asynchronous job processing system built to handle background tasks at scale. Designed with reliability and throughput in mind — ensuring no job is lost, even under high traffic.",
+    "tech": [
+      "Node.js",
+      "Express",
+      "Bull",
+      "Redis"
+    ],
+    "link": "#",
+    "github": "#",
+    "research_note": "Implemented retry logic, job prioritization, and concurrency control — reducing system load and preventing failures under high traffic."
+  },
+  {
     "title": "QnA-Hub",
     "category": "Platform / Social",
     "period": "2024",
