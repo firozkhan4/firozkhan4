@@ -17,7 +17,7 @@
   {
     "title": "Job Queue Service",
     "category": "Backend / Infrastructure",
-    "period": "2025",
+    "period": "2026",
     "description": "An asynchronous job processing system built to handle background tasks at scale. Designed with reliability and throughput in mind — ensuring no job is lost, even under high traffic.",
     "tech": [
       "Node.js",
