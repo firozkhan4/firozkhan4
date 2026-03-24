@@ -3,6 +3,7 @@ import { Newsreader } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
 import Footer from "./components/Footer";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const newsreader = Newsreader({
   variable: "--font-newsreader",
@@ -71,9 +72,10 @@ export default function RootLayout({
       <body
         className={`${newsreader.variable} ${newsreader.variable} antialiased`}
       >
-          <Header />
-          {children}
-          <Footer />
+        <Header />
+        {children}
+        <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
